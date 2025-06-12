@@ -201,6 +201,7 @@ main{
             background: none;
             border: none;
             color: var(--always-white);
+            cursor: pointer;
     }
 }
 
