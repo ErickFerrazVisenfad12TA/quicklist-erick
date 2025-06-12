@@ -107,3 +107,63 @@ main{
         }
     }
 }
+
+.list {
+    .item{
+        background: var(--background-secondary);
+        padding: 1.2rem;
+        margin-bottom: 1.2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        font-weight: 500;
+        border-radius: 12px;
+        box-shadow: 0 2px 6px rgba(8, 11, 18, 0.2);
+
+        div{
+            display: flex;
+            gap: 1.2rem;
+            align-items: center;
+        }
+
+        .custom-checkbox{
+            width: 1.6rem;
+            height: 1.6rem;
+            border: 1px solid var(--border-primary);
+            border-radius: 6px;
+        }
+
+        input{
+            display: none;
+        }
+
+        div:has(input:checked) {
+            .custom-checkbox{
+                background: var(--color-brand);
+                border: 1px solid var(--color-brand);
+                transition: .2s;
+            }
+
+            label{
+                text-decoration: line-through;
+            }
+        }
+
+        button{
+            background: none;
+            border: none;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            img {
+                width: 1.6rem;
+                opacity: .7;
+            }
+        }
+    }
+}
+
+
